@@ -10,7 +10,10 @@ const usermodel = require("./models/UserModel")
 const companymodel = require("./models/CompanyModel")
 const jobsmodel = require("./models/JobsModel")
 const applicationmodel = require("./models/JobApplication")
+<<<<<<< HEAD
 const cors = require("cors")
+=======
+>>>>>>> f0c1a0115a86c42b1a1ddd5cd3d3e07c41a540f7
 
 const app = express()
 const PORT = 3000;
@@ -36,15 +39,19 @@ app.use(bodyparser.urlencoded({
     extended:true
 }))
 
+<<<<<<< HEAD
 
 app.use(cors())
 
+=======
+>>>>>>> f0c1a0115a86c42b1a1ddd5cd3d3e07c41a540f7
 app.use(bodyparser.json({
     limit:"50mb"
 
 }))
 
 
+<<<<<<< HEAD
 app.post("/testend",(req, res)=>{
 
     console.log(req.body)
@@ -64,6 +71,26 @@ app.post("/signup", async(req, res)=>{
      && (lastName === 0 ||lastName === undefined) 
      && (firstName === 0 || firstName === undefined)
      && (company === 0 || company === undefined)
+=======
+app.post("/signup", async(req, res)=>{
+
+    // res.json({msg:"testing the signup input"})
+    let userName = req.body.username
+    let password = req.body.password
+    let surName = req.body.surname
+    let firstName = req.body.firstname
+    let dateofbirth = req.body.dateofbirth
+    let sex = req.body.sex
+    let email = req.body.email
+    let phoneNumber = req.body.phonenumber
+
+     if ((userName === 0 || userName === undefined)  
+     && (password === 0 || password === undefined) 
+     && (surName === 0 || surName === undefined) 
+     && (firstName === 0 || firstName === undefined) 
+     && (dateofbirth === 0 || dateofbirth === undefined)
+     && (sex === 0 || sex === undefined)
+>>>>>>> f0c1a0115a86c42b1a1ddd5cd3d3e07c41a540f7
      && (email === 0 || email === undefined) 
      && (phoneNumber === 0 || phoneNumber === undefined))
     {
@@ -73,8 +100,15 @@ app.post("/signup", async(req, res)=>{
     {
         const userdetails = {
             firstnmae: firstName,
+<<<<<<< HEAD
             lastname: lastName,
             company: company,
+=======
+            surname: surName,
+            dateofbirth: dateofbirth,
+            sex: sex,
+            username: userName,
+>>>>>>> f0c1a0115a86c42b1a1ddd5cd3d3e07c41a540f7
             password: password,
             email: email,
             phonenumber: phoneNumber

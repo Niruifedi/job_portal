@@ -11,7 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
+<<<<<<< HEAD
     "cors": "^2.8.5",
+=======
+>>>>>>> f0c1a0115a86c42b1a1ddd5cd3d3e07c41a540f7
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.5",
